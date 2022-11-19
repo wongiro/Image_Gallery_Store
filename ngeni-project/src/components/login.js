@@ -1,5 +1,7 @@
 import ReactDOM from "react-dom/client";
 import React, { useState } from "react";
+import { Outlet, Link } from "react-router-dom";
+
 import "./login.css";
 
 function Login() {
@@ -14,15 +16,15 @@ function Login() {
                      <input type="password" required placeholder="Password" class="pass-key" />
                  </div>
                  <div className="pass">
-                    <a href="#">Forgot Password?</a>
+                    <Link to="reset">Forgot Password?</Link>
                  </div>
                  <div className="field">
                      <input type="submit" value="Log in" />
                  </div>
              </form>
              <div className="pass">
-                    Don't have an account?<a href="#"> Sign Up.</a>
-                 </div>
+                    Don't have an account? <Link to="/signup">Sign Up</Link>.
+            </div>
         </div>    
   );
 }
