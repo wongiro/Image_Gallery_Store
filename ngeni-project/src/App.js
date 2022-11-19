@@ -1,13 +1,29 @@
+
+import React from 'react';
 import Login from './components/login';
+// import SignUp from './components/signUp';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import './App.css';
+import SignUp from './components/signup';
 
 function App() {
   return (
+    
     <div className="App">
-      <header className="App-header">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/signup" element={<SignUp />}></Route>
+        </Routes>
+      </BrowserRouter>
+
+      {/* <header className="App-header">
         <Login />
-      </header>
+      </header> */}
+
     </div>
+    
   );
 }
 
