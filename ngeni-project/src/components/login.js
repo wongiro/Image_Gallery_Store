@@ -16,7 +16,7 @@ function Login() {
                      <input type="password" required placeholder="Password" class="pass-key" />
                  </div>
                  <div className="pass">
-                    <Link to="reset">Forgot Password?</Link>
+                    <Link to="reset">Forgot Password</Link>?
                  </div>
                  <div className="field">
                      <input type="submit" value="Log in" />
