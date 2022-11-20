@@ -14,7 +14,6 @@ header {
     background-color: white;
     display: flex;
     flex-direction: column;
-    /*align-items: left;*/
     padding: 20px;
     font-size: calc(10px + 2vmin);
     border-bottom: 1px solid rgb(214, 207, 207);
@@ -36,14 +35,6 @@ header {
     box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.203);
 }
 
-/*.content header{
-    font-size: 33px;
-    font-weight: 600;
-    margin: 0 0 35px 0;
-    margin-bottom: 65px;
-    font-family: "Montserrat", sans-serif;
-}*/
-
 .field{
     position: relative;
     height: 45px;
@@ -51,12 +42,6 @@ header {
     display: flex;
     background: rgba(255, 255, 255, 0.94);
 }
-
-/*.field span{
-    color: #222;
-    width: 40px;
-    line-height: 45px;
-}*/
 
 .field input{
     height: 100%;
@@ -68,10 +53,6 @@ header {
     font-size: 16PX;
     font-family: "Poppins", sans-serif;
 }
-
-/*.space{
-    margin-top: 16px;
-}*/
 
 .pass-key:valid{
     display: block;
@@ -105,8 +86,3 @@ header {
     background: #4a8de4f5;
 }
 
-/*.login{
-    color: white;
-    margin: 20px 0;
-    font-family: "Poppins", sans-serif;
-}*/

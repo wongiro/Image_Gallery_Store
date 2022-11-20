@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import SignUp from './components/signup';
 import Reset from './components/reset';
+import Gallery from './components/gallery';
 
 function App() {
   return (
@@ -17,12 +18,9 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
           <Route path="/reset" element={<Reset />}></Route>
+          <Route path="/gallery" element={<Gallery />}></Route>
         </Routes>
       </BrowserRouter>
-
-      {/* <header className="App-header">
-        <Login />
-      </header> */}
 
     </div>
     
