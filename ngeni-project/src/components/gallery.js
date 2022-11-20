@@ -2,6 +2,7 @@ import ReactDOM from "react-dom/client";
 import React, { useState } from "react";
 
 import { Outlet, Link } from "react-router-dom";
+import AddPost from "./addpost";
 
 import "./gallery.css";
 
@@ -41,19 +42,8 @@ function Gallery() {
 
       <div className="gallery_content">
       <div className="container">
-        <div className="add_photo">
           {/* this is the upload image component */}
-          <div className="upload_button">
-            <button>Upload Photo</button>
-          </div>
-          <div className="image_caption">
-            <input type="text" placeholder="Add caption.." />
-          </div>
-          <div className="post_button">
-            <button>Post</button>
-          </div>
-        </div>
-
+         <AddPost />
 
         {/* This is the image timeline */}
         <div className="timeline">
