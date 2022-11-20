@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom/client";
 import React, { useState } from "react";
 
+
 import { Outlet, Link } from "react-router-dom";
 
 
@@ -18,6 +19,7 @@ function Login() {
                      <input type="password" required placeholder="Password" class="pass-key" />
                  </div>
                  <div className="pass">
+
 
                     <Link to="reset">Forgot Password</Link>?
 
