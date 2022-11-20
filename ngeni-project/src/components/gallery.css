@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins&family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins&family=Roboto&family=Shadows+Into+Light&display=swap');
+
+.main_page{
+    position: absolute;
+    border: 1px solid rgb(214, 207, 207);
+    width: 100%;
+    height: 100%;
+}
+
+.gallery_header{
+    position: relative;
+    border: 1px solid rgb(214, 207, 207);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.website_name{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.gallery_content{
+    margin: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 12px;
+}
+
+.gallery_content .container {
+    width: 650px;
+}
+
+.gallery_item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid rgb(214, 207, 207);
+    box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.203);
+}
+
+.user_info {
+    padding: 15px
+}
+
+.title {
+    padding: 15px
+}
+
+.caption {
+    padding: 15px
+}
+
+.uploaded-image {
+    overflow: hidden;
+    max-height: 400px;
+}
+
+.uploaded-image img {
+    min-width: 100%;
+}
+
+
+.add_photo{
+    border: 1px solid rgb(214, 207, 207);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 12px;
+}
+
+button{
+    color: white;
+}
+
+.upload_button {
+    max-width: 10%;
+}
+
+.upload_button button {
+    background-color: #4a8de4f5;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.image_caption {
+    min-width: 67%;
+}
+
+.image_caption input {
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px 15px 15px 15px;
+}
+
+.post_button{
+    min-width: 10%;
+}
+
+.post_button button{
+    background-color: #4a8de4f5;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.timeline {
+    text-align: left;
+}
