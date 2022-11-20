@@ -7,15 +7,12 @@ import { Outlet, Link } from "react-router-dom";
 function Reset() {
   return (
     <div>
-      <div className="topHeader">
-        <header>Snap Store</header>
-      </div>
       <div className="content">
+      <header>Snap Store</header>
         <h2>Trouble logging in?</h2>
         <br />
         <p>
-          Enter your email, phone, or username and new password to reset
-          password.
+        Enter your email, phone, or username and we'll send you a link to get back into your account.
         </p>
         <form action="#">
           <div className="field">
@@ -24,12 +21,6 @@ function Reset() {
               required
               placeholder="Email, Phone, or Username"
             />
-          </div>
-          <div className="field">
-            <input type="text" required placeholder="Newpassword" />
-          </div>
-          <div className="field">
-            <input type="text" required placeholder="Re-enter new password" />
           </div>
           <div className="field">
             <input type="submit" value="Reset password" />

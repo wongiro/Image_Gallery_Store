@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './App.css';
 import SignUp from './components/signup';
+import Reset from './components/reset';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
+          <Route path="/reset" element={<Reset />}></Route>
         </Routes>
       </BrowserRouter>
 
