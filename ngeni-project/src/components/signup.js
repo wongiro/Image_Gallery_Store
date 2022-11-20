@@ -10,21 +10,21 @@ function SignUp() {
       <header>Snap Store</header>
       <p>Sign up to see photos from your friends</p>
       <form action="#">
-        <div class="field">
+        <div className="field">
           <input type="text" required placeholder="Mobile Number or Email" />
         </div>
-        <div class="field">
+        <div className="field">
           <input type="text" required placeholder="Full Name" />
         </div>
-        <div class="field">
+        <div className="field">
           <input type="text" required placeholder="Username" />
         </div>
-        <div class="field space">
+        <div className="field space">
           <input
             type="password"
             required
             placeholder="Password"
-            class="pass-key"
+            className="pass-key"
           />
         </div>
         <div>

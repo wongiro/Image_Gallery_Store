@@ -12,16 +12,16 @@ function Login() {
     <div className="content">
              <header>Snap Store</header>
              <form action="#">
-             <div class="field">
+             <div className="field">
                      <input type="text" required placeholder="Enter Email" />
                  </div>
-                 <div class="field space">
-                     <input type="password" required placeholder="Password" class="pass-key" />
+                 <div className="field space">
+                     <input type="password" required placeholder="Password" className="pass-key" />
                  </div>
                  <div className="pass">
 
 
-                    <Link to="reset">Forgot Password</Link>?
+                    <Link to="/reset">Forgot Password</Link>?
 
                  </div>
                  <div className="field">
@@ -29,7 +29,7 @@ function Login() {
                  </div>
              </form>
              <div className="pass">
-                    Don't have an account? <Link to="/signup">Sign Up</Link>.
+                    <p>Don't have an account?</p><Link to="/signup">Sign Up</Link>.
             </div>
 
         </div>    
