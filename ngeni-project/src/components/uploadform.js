@@ -6,15 +6,17 @@ const UploadForm = (props) => {
   const [post, setPost] = useState({
     title: props.post ? props.post.title : "",
     description: props.post ? props.post.description : "",
+    image: props.post ? props.post.image : "",
     date: props.post ? props.post.date : ""
   });
 
   const [errorMsg, setErrorMsg] = useState("");
-  const { title, description } = post;
+  const { title, description, image } = post;
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    const values = [title, description];
+    const values = [title, description, image];
+    console.log(values)
     let errorMsg = "";
 
     const allFieldsFilled = values.every((field) => {
@@ -27,6 +29,7 @@ const UploadForm = (props) => {
         id: uuidv4(),
         title,
         description,
+        image,
         date: new Date(),
       };
       props.handleOnSubmit(post);
@@ -38,6 +41,20 @@ const UploadForm = (props) => {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
+
+    // if (['image'].includes(name)) {
+    //   const image = event.target.files[0]
+    //   const reader = new FileReader()
+    //   reader.readAsDataURL(image);
+
+    //   reader.addEventListener('load', () => {
+    //     console.log(reader.result)
+    //     console.log(event)
+    //     value = reader.result
+    //     // post.imageUrl = reader.result
+    //   });
+    // }
+
     setPost((prevState) => ({
         ...prevState,
         [name]: value,
@@ -70,8 +87,19 @@ const UploadForm = (props) => {
             onChange={handleInputChange}
           />
         </Form.Group>
+        <Form.Group controlId="image">
+          <Form.Label>Image</Form.Label>
+          <Form.Control
+            className="input-control"
+            type="file"
+            name="image"
+            value={image}
+            accept="image/png, image/jpeg"
+            onChange={handleInputChange}
+          />
+        </Form.Group>
         <Button variant="primary" type="submit" className="submit-btn">
-          Post
+          Upload
         </Button>
       </Form>
     </div>

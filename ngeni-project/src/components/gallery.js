@@ -3,12 +3,11 @@ import React, { useState } from "react";
 
 import { Outlet, Link } from "react-router-dom";
 import AddPost from "./addpost";
+import useLocalStorage from "./localstorage";
 
 import "./gallery.css";
 
-function Gallery() {
-
-
+const Gallery = () => {
 
     const img1 = "https://picsum.photos/100/100";
     const img2 = "https://picsum.photos/200/200";
@@ -28,11 +27,13 @@ function Gallery() {
         img6
     ]
 
+  const [posts, setPosts] = useLocalStorage('posts', []);
+
   return (
     <div className="main_page">
       <div className="gallery_header">
         <div className="user_name">
-          <Link to="gallery">Gallery</Link>
+          <Link to="/gallery">Gallery</Link>
         </div>
         <div className="website_name">Snap Store</div>
         <div className="sign_out">
@@ -43,11 +44,31 @@ function Gallery() {
       <div className="gallery_content">
       <div className="container">
           {/* this is the upload image component */}
-         <AddPost />
+          <AddPost posts={posts} setPosts={setPosts} />
+          
 
         {/* This is the image timeline */}
         <div className="timeline">
             {/* this is a gallery item */}
+
+            {posts.map((value) => {
+                return (
+                    <div className="gallery_item" >
+                        <div className="user_info">
+                            Robinson
+                        </div>
+
+                        <div className="uploaded-image">
+                            <img src={value.image} alt="Random-images"></img>
+                        </div>
+
+                        <div className="caption">
+                            <h3>{value.title}</h3>
+                            <p>{value.description}</p>
+                        </div>
+                    </div>
+                )
+            })}
 
             {items.map((value) => {
                 return (
