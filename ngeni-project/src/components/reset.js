@@ -3,8 +3,30 @@ import React from "react";
 import { useState } from "react";
 import ReactDOM from "react-dom/client";
 import { Outlet, Link } from "react-router-dom";
+import app from "../config/firebase";
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 
 function Reset() {
+
+const auth = getAuth(app);
+const [email, setEmail] = useState("")
+
+const resetPassword = () => {
+  sendPasswordResetEmail(auth, email)
+  .then(() => {
+    // Password reset email sent!
+    alert("Email sent")
+    // ..
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    alert("Email doesnt exist")
+    //const errorMessage = error.message;
+    // ..
+  });
+}
+
+
   return (
     <div>
       <div className="content">
@@ -17,13 +39,14 @@ function Reset() {
         <form action="#">
           <div className="field">
             <input
-              type="text"
+              type="email"
               required
-              placeholder="Email, Phone, or Username"
+              placeholder="Enter email"
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="field">
-            <input type="submit" value="Reset password" />
+            <input type="submit" value="Reset password" onClick={resetPassword}/>
           </div>
         </form>
         <div>
